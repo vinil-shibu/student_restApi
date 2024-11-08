@@ -5,15 +5,16 @@ import java.util.List;
 import org.springframework.http.ResponseEntity;
 
 import com.jsp.student_restApi.dto.Student;
+import com.jsp.student_restApi.helper.ResponseStructure;
 
 public interface StudentService {
 
-	ResponseEntity<Student> registerStudent(Student student);
+	ResponseEntity<ResponseStructure<Student>> registerStudent(Student student);
 
-	ResponseEntity<List<Student>> fetchStudent();
+	ResponseEntity<ResponseStructure<List<Student>>> fetchStudent();
 
-	ResponseEntity<String> udpadeStudent(int id, Student student);
+	ResponseEntity<ResponseStructure<Student>> udpadeStudent(Student student);
 
-	ResponseEntity<String> deleteStudent(int id);
+	ResponseEntity<ResponseStructure<Student>> deleteStudent(int id);
 	
 }

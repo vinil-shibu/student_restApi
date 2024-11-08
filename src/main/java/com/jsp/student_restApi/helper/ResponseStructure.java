@@ -1,5 +1,13 @@
 package com.jsp.student_restApi.helper;
 
-public class ResponseStructure {
+import org.springframework.stereotype.Component;
 
+import lombok.Data;
+
+@Data
+@Component
+public class ResponseStructure<T> {
+	String message;
+	int status;
+	T data;
 }
